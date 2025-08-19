@@ -1,0 +1,391 @@
+:root {
+  --color-primary: #7B68EE;
+  --color-secondary: #F4F1DE;
+  --color-accent: #25D366;
+  --color-whatsapp: #25D366;
+  --color-facebook: #3b5998;
+  --color-instagram: #E1306C;
+  --color-dark: #3D3B40;
+  --color-light: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  display: none !important;
+}
+
+header {
+  background: var(--color-light);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 0.5rem 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px; /* Overridden to 100px as per your latest request */
+  transition: top 0.3s;
+}
+
+.logo {
+  height: 70px;
+  margin-right: 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--color-primary);
+}
+
+.social-icon {
+  color: inherit;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  transform: none; /* Removed hover transform to match FB/IG */
+}
+
+.header-right a[aria-label="Facebook"]:hover {
+  color: #2e4474;
+}
+
+.header-right a[aria-label="Instagram"]:hover {
+  color: #b32d5c;
+}
+
+.language-selector button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.language-selector button.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero {
+  background: linear-gradient(rgba(123, 104, 238, 0.7), rgba(244, 241, 222, 0.7));
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 5% 5%; /* Adjusted padding-top to match 100px header */
+  position: relative;
+  overflow: hidden;
+  margin-top: 0; /* Removed margin-top since padding-top handles the header offset */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 15px;
+  filter: brightness(80%);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: var(--color-whatsapp);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+}
+
+.metodologia-section {
+  padding: 100px 5%;
+  background-color: var(--color-secondary);
+  text-align: center;
+}
+
+.vantagens-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vantagem-card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vantagem-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.vantagem-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.vantagem-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.aulas-section {
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.aulas-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-dark);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.contato-section {
+  padding: 100px 5%;
+  background-color: var(--color-secondary);
+}
+
+.contato-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #6a5acd;
+}
+
+footer {
+  background-color: var(--color-dark);
+  color: white;
+  padding: 30px 5%;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--color-accent);
+}
+
+.contact-info {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.hidden-header {
+  top: -100px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  nav {
+    display: none;
+  }
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .vantagens-container {
+    grid-template-columns: 1fr;
+  }
+  header {
+    height: 60px; /* Mobile height adjustment */
+  }
+  .logo {
+    height: 50px;
+  }
+  .hero {
+    padding-top: 60px; /* Adjusted for mobile header height */
+  }
+  .footer-content {
+    gap: 15px;
+  }
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}
